@@ -17,20 +17,33 @@
 // Related Topics 数组 双指针 二分查找
 
 package leetcode.editor.cn;
+
 //Java：两数之和 II - 输入有序数组
-class P167TwoSumIiInputArrayIsSorted{
+class P167TwoSumIiInputArrayIsSorted {
     public static void main(String[] args) {
         Solution solution = new P167TwoSumIiInputArrayIsSorted().new Solution();
         // TO TEST
     }
 
 
-//leetcode submit region begin(Prohibit modification and deletion)
-class Solution {
-    public int[] twoSum(int[] numbers, int target) {
-        return null;
+    //leetcode submit region begin(Prohibit modification and deletion)
+    class Solution {
+        public int[] twoSum(int[] numbers, int target) {
+            if (numbers == null) return null;
+            int left = 0;
+            int right = numbers.length - 1;
+            while (left < right) {
+                if (numbers[left] + numbers[right] == target){
+                    return new int[]{left + 1, right + 1};
+                }else if (numbers[left] + numbers[right] > target) {
+                    right--;
+                }else {
+                    left++;
+                }
+            }
+            return null;
+        }
     }
-}
 //leetcode submit region end(Prohibit modification and deletion)
 
 }
