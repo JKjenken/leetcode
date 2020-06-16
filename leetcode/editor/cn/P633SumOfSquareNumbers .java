@@ -27,7 +27,6 @@ class P633SumOfSquareNumbers {
         // TO TEST
     }
 
-
     //leetcode submit region begin(Prohibit modification and deletion)
     class Solution {
         public boolean judgeSquareSum(int c) {
