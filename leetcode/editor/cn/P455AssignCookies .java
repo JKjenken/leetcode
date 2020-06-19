@@ -35,6 +35,9 @@
 // Related Topics 贪心算法
 
 package leetcode.editor.cn;
+
+import java.util.Arrays;
+
 //Java：分发饼干
 class P455AssignCookies{
     public static void main(String[] args) {
@@ -46,7 +49,22 @@ class P455AssignCookies{
 //leetcode submit region begin(Prohibit modification and deletion)
 class Solution {
     public int findContentChildren(int[] g, int[] s) {
-return 1;
+        //贪心算法
+        //1.给一个孩子的饼干应当尽量小并且又能满足该孩子，这样大饼干才能拿来给满足度比较大的孩子。
+        //2.因为满足度最小的孩子最容易得到满足，所以先满足满足度最小的孩子。
+        Arrays.sort(g);
+        Arrays.sort(s);
+        int gi = 0, si = 0;
+        while (gi <= si && gi < g.length && si < s.length) {
+            //给满足度最小的小孩一块最小的饼干
+            if (g[gi] <= s[si]) {
+                //满足
+                gi++;
+            }
+            //不满足的话，再拿一块更大的
+            si++;
+        }
+        return gi;
     }
 }
 //leetcode submit region end(Prohibit modification and deletion)
