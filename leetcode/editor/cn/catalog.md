@@ -6,3 +6,6 @@ https://github.com/CyC2018/CS-Notes/blob/master/notes/Leetcode%20%E9%A2%98%E8%A7
 
 #github企业内推
 https://github.com/CyC2018/Job-Recommend
+
+#leecode算法题解(参考)
+https://lbb4511.top/docs/leetcode/
