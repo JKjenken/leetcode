@@ -62,7 +62,13 @@ class Solution {
         }
 
         //按区间的结尾进行排序
-        Arrays.sort(intervals, Comparator.comparingInt(o -> o[1]));
+//        Arrays.sort(intervals, Comparator.comparingInt(o -> o[1]));
+        Arrays.sort(intervals, new Comparator<int[]>() {
+            @Override
+            public int compare(int[] o1, int[] o2) {
+                return o1[1] - o2[1];
+            }
+        });
         //每次选择结尾最小，并且和前一个区间不重叠的区间。(贪心算法)
         int cnt = 1;
         int end = intervals[0][1];
