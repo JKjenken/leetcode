@@ -9,3 +9,6 @@ https://github.com/CyC2018/Job-Recommend
 
 #leecode算法题解(参考)
 https://lbb4511.top/docs/leetcode/
+
+#东哥算法精选
+https://mp.weixin.qq.com/s/AWsL7G89RtaHyHjRPNJENA
